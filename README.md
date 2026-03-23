@@ -11,11 +11,11 @@ Ce projet a été réalisé en équipe dans le cadre du **BUT Informatique**. Il
 L'objectif était de mobiliser une architecture complète (Fullstack) tout en respectant un cycle de développement professionnel : de l'analyse des besoins jusqu'au déploiement système, en passant par la conception UML et la base de données.
 
 ## 🎯 Mes Contributions Spécifiques
-En tant que membre très impliqué dans le cycle de vie de cette application, j'ai particulièrement piloté les axes suivants :
+Au sein de l'équipe, j'ai adopté un rôle fortement orienté sur la cohérence globale du projet, la vérification et l'interface :
 
-- **UI/UX & Front-End :** Conception des maquettes initiales, définition de la charte graphique (couleurs, ergonomie) et développement de l'interface utilisateur pour garantir une navigation fluide aux différents profils (Admin, Tech).
-- **Intégrité de la Base de Données :** Participation active à la modélisation et à l'implémentation de la base **MariaDB** (garantie des contraintes d'intégrité, relations fiables entre le matériel et les utilisateurs).
-- **Assurance Qualité (QA) & Documentation :** Travail approfondi de synthèse, de vérification croisée et de validation technique sur l'ensemble des livrables (Cahier des charges, spécifications fonctionnelles, modèles UML). Une documentation rigoureuse est la première ligne de défense d'un projet maintenable.
+- **UI/UX & Maquettage :** Participation à l'élaboration de la maquette initiale, avec un focus particulier sur l'identité visuelle de l'application (choix des couleurs, de la typographie et agencement).
+- **Base de Données (MariaDB) :** Revue et vérification de la conception (MCD/MLD/Tables). Je suis notamment intervenu en fin de cycle pour auditer et corriger une erreur d'intégrité structurelle sur la base de données.
+- **Assurance Qualité (QA) & Documentation :** Relecture systématique, vérification de l'ensemble des livrables documentaires (Cahier des charges, spécifications, architecture). Cette démarche m'a permis de garantir la cohérence fonctionnelle et d'acquérir une maîtrise globale de l'architecture de l'application.
 
 ## ⚙️ Fonctionnalités Principales
 
