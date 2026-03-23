@@ -1,103 +1,41 @@
-# SAÉ 3 – Application de gestion d’un parc informatique
+# 🖥️ Système Web de Gestion de Parc Informatique (SAÉ 3)
 
-Ce projet a été réalisé dans le cadre de la SAÉ 3 du BUT Informatique.  
-Il consiste à concevoir et déployer une application web permettant la gestion d’un parc informatique pédagogique sur un serveur Raspberry Pi.
+![Stack](https://img.shields.io/badge/Stack-LAMP-blue.svg)
+![Database](https://img.shields.io/badge/Database-MariaDB-4479A1.svg)
+![Infra](https://img.shields.io/badge/Infra-Raspberry_Pi-C51A4A.svg)
+![Security](https://img.shields.io/badge/Focus-AppSec-orange.svg)
 
-Le projet mobilise plusieurs domaines : analyse, conception, développement web, base de données, système et réseau, statistiques et documentation.
+## 📌 Contexte du Projet
+Ce projet a été réalisé en équipe dans le cadre du **BUT Informatique**. Il s'agit de la conception intégrale et du déploiement d'une application web de gestion de parc informatique pédagogique, hébergée sur un serveur physique **Raspberry Pi (Debian)**.
 
----
+L'objectif était de mobiliser une architecture complète (Fullstack) tout en respectant un cycle de développement professionnel : de l'analyse des besoins jusqu'au déploiement système, en passant par la conception UML et la sécurisation des accès.
 
-## Organisation du dépôt
+## 🎯 Mon Focus Technique & Rôle
+En tant que membre très impliqué du projet, mon approche s'est fortement orientée sur la robustesse du Back-end et la sécurité applicative :
+- **Sécurisation de l'Authentification :** Gestion stricte des rôles (RBAC : Admin, Sysadmin, Technicien). *(Note : Ce travail fait écho à mon implémentation algorithmique [ChaCha20-Python](https://github.com/Ilyes-Akhdari/ChaCha20-Python) réalisée en parallèle sur le chiffrement des flux).*
+- **Intégrité des Données :** Modélisation et requêtage sécurisé sur **MariaDB**.
+- **Supervision :** Consultation sécurisée des journaux d'activité système (logs Apache) via l'interface Sysadmin.
 
-Le dépôt est structuré selon les différentes étapes et domaines du projet.
+## ⚙️ Architecture et Fonctionnalités
 
-### Analyse
-Ce dossier contient les documents liés à l’analyse du besoin :
-- recueil des besoins
-- cahier des charges
-- analyse fonctionnelle
+### Authentification & Droits
+- Connexion sécurisée et routage selon 3 niveaux d'accréditation.
+- **Administrateur :** Gestion des comptes, systèmes d'exploitation et constructeurs.
+- **Technicien :** Gestion opérationnelle (CRUD) des machines du parc via formulaires sécurisés.
+- **Administrateur système :** Audit et monitoring du serveur (Logs Apache).
 
-### Conception
-Ce dossier contient les modèles et diagrammes :
-- MCD et MLD de la base de données
-- diagrammes UML
-- diagrammes de cas d’utilisation
-
-### DOC
-Ce dossier regroupe la documentation du projet, notamment les livrables des différentes échéances.
-
-### SRC
-Ce dossier contient le code source de l’application web.
-
-Sous-dossiers principaux :
-- admin : fonctionnalités de l’administrateur
-- sysadmin : consultation des journaux système
-- tech : fonctionnalités du technicien
-- stats : statistiques et probabilités
-- inc : fichiers de configuration et connexion à la base de données
-- data : fichiers CSV utilisés pour les statistiques
-- style : feuilles de style CSS
-
-Fichiers principaux :
-- index.php
-- login.php
-- logout.php
-
-### Spec
-Ce dossier contient les spécifications fonctionnelles et techniques.
-
-### test
-Ce dossier contient les tests réalisés sur l’application.
+### Stack Technologique
+- **Infrastructure :** Raspberry Pi sous Debian.
+- **Serveur & Base de données :** Apache, PHP, MariaDB.
+- **Statistiques :** Analyse de données via parsing de fichiers CSV.
 
 ---
 
-## Fonctionnalités principales
+## 📂 Organisation de l'Architecture (MVC & Cycle en V)
 
-### Authentification
-- Connexion par identifiant et mot de passe.
-- Gestion de plusieurs rôles : administrateur, administrateur système et technicien.
+Notre dépôt reflète une méthodologie de travail structurée :
 
-### Administrateur
-- Création de comptes technicien.
-- Gestion des systèmes d’exploitation.
-- Gestion des constructeurs.
-- Consultation du parc informatique.
-
-### Technicien
-- Consultation du parc informatique.
-- Ajout et modification de machines via des formulaires.
-
-### Administrateur système
-- Consultation des journaux d’activité du serveur (logs Apache).
-- Surveillance du fonctionnement du serveur.
-
-### Statistiques
-- Analyse des données du parc informatique à partir de fichiers CSV.
-- Affichage d’indicateurs et de graphiques.
-
----
-
-## Technologies utilisées
-
-- Raspberry Pi sous Debian
-- Apache, PHP
-- MariaDB
-- HTML, CSS
-- Git et GitHub
-
----
-
-## Branche du projet
-
-Le code principal du projet se trouve sur la branche `master`.
-
----
-
-## Objectif pédagogique
-
-Ce projet permet de mettre en pratique des compétences en :
-- système et réseau,
-- développement web,
-- base de données,
-- analyse statistique,
-- travail en équipe et gestion de projet.
+* 📁 **Analyse & Spec :** Recueil des besoins, cahier des charges, et spécifications.
+* 📁 **Conception :** Diagrammes UML, Modèles conceptuels et logiques (MCD/MLD).
+* 📁 **SRC (Code Source) :** Logique métier séparée par rôles (`admin`, `sysadmin`, `tech`, `stats`).
+* 📁 **Test :** Scripts et protocoles de validation.
